@@ -1,0 +1,4 @@
+# file: roles/httpd/tasks/service.yml
+
+- name: Start Apache server
+  service: name=httpd enabled=yes state=started

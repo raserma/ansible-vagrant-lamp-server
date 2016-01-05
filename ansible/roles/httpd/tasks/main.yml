@@ -1,0 +1,5 @@
+# file: roles/httpd/tasks/main.yml
+
+- include: packages.yml
+- include: configure.yml
+- include: service.yml

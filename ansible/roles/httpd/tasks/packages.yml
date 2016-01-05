@@ -1,0 +1,8 @@
+# file: roles/httpd/tasks/packages.yml
+
+- name: Install Apache server
+  sudo: yes
+  yum: pkg={{ item }} state=installed
+  with_items:
+     - httpd
+     - httpd-devel

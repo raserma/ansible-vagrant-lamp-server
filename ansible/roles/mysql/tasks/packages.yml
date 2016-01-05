@@ -1,0 +1,8 @@
+# file: roles/httpd/tasks/packages.yml
+
+- name: Install MySQL packages
+  yum: pkg={{ item }}
+  with_items:
+    - mysql
+    - mysql-server
+    - mysql-devel

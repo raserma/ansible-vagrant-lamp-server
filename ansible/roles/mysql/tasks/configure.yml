@@ -1,0 +1,16 @@
+# file: roles/mysql/tasks/configure.yml
+
+- name: Set MySQL root password
+  mysql_user: name=root 
+              host={{ item }} 
+              password={{ mysql_root_password }} priv=*.*:ALL,GRANT
+  with_items:
+    - 127.0.0.1
+    - localhost
+
+- name: Create demo db
+  mysql_db: name=demo
+            state=present
+
+- name: Create user guest
+  mysql_user: 

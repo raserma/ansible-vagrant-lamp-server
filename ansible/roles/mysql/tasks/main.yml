@@ -1,0 +1,5 @@
+# file: roles/mysql/tasks/main.yml
+
+- include: packages.yml
+- include: configure.yml
+- include: service.yml

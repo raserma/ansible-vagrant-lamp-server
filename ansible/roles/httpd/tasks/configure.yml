@@ -1,0 +1,7 @@
+# file: roles/httpd/tasks/configure.yml
+
+- name: Set ServerName on Apache conf file
+  sudo: yes
+  lineinfile: dest=/etc/httpd/conf/httpd.conf line="ServerName 127.0.0.1:8080"
+  notify: 
+    - restart httpd
