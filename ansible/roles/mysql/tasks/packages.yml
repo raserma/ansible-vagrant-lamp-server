@@ -6,3 +6,7 @@
     - mysql
     - mysql-server
     - mysql-devel
+    - MySQL-python
+
+- name: Start mysql service
+  service: name=mysqld state=started enabled=yes

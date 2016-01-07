@@ -2,4 +2,3 @@
 
 - include: packages.yml
 - include: configure.yml
-- include: service.yml

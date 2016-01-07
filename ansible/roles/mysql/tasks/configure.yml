@@ -4,13 +4,8 @@
   mysql_user: name=root 
               host={{ item }} 
               password={{ mysql_root_password }} priv=*.*:ALL,GRANT
+              login_user=root
+              login_password={{ mysql_root_password }}
   with_items:
     - 127.0.0.1
     - localhost
-
-- name: Create demo db
-  mysql_db: name=demo
-            state=present
-
-- name: Create user guest
-  mysql_user: 
