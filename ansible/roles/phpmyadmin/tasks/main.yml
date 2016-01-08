@@ -1,0 +1,4 @@
+# file roles/phpmyadmin/tasks/main.yml
+
+- include: packages.yml
+- include: configure.yml

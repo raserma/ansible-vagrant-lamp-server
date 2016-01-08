@@ -1,0 +1,8 @@
+#file roles/phpmyadmin/tasks/packages.yml
+- name: Install EPEL-release repository
+  yum: name=http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
+  notify:
+    - Override mirror list
+
+- name: Install PHPMyAdmin package
+  yum: pkg=phpMyAdmin state=present

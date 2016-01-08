@@ -1,0 +1,7 @@
+# file roles/php/tasks/configure.yml
+- file: path=/var/www/html state=directory
+
+- name: Set PHP configuration files
+  copy: src=src/ dest=/var/www/html mode=0644
+  notify:
+    - restart httpd

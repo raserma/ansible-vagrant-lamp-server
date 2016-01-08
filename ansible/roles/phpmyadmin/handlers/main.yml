@@ -1,0 +1,9 @@
+# file roles/phpmyadmin/handlers/main.yml
+
+- name: Override mirror list
+  lineinfile: dest=/etc/yum.repos.d/epel.repo 
+              regexp=^mirrorlist=https line=mirrotlist=http
+              state=present
+
+- name: restart httpd
+  service: name=httpd state=restarted  

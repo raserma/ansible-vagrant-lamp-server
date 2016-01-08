@@ -1,0 +1,9 @@
+# file roles/phpmyadmin/tasks/config.yml
+
+- name: Configure PHPMyAdmin conf file
+  template: src=phpmyadmin.conf 
+            dest=/etc/httpd/conf.d/phpMyAdmin.conf
+            owner=root
+            mode=0644
+  notify:
+    - restart httpd
