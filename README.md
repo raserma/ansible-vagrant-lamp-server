@@ -9,6 +9,7 @@ Requirements
 * VirtualBox
 * Vagrant
 * Git
+* Ansible installed on the host machine
 
 Usage
 -----
@@ -31,6 +32,7 @@ password: 1234
 
 username: guest
 password: guest
+
 #### PHP
 Make a change to `./src/init.php`, save it and reload the page. You will see the change inmediately.
 
@@ -46,6 +48,5 @@ Technical Details
 * PHP 5.1.6
 * MySQL 5.1
 * phpMyAdmin tool
-* Ansible
 
 
